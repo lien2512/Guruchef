@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import {Routes, RouterModule} from '@angular/router';
 import {LoginService} from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import {SearchServiceService} from './services/search-service.service';
+import * as $ from 'jquery';
 const routerConfig: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'search', component: MainComponent},
@@ -31,6 +33,6 @@ const routerConfig: Routes = [
     ],
   exports: [RouterModule],
   bootstrap: [AppComponent],
-  providers: [LoginService, HttpClientModule]
+  providers: [LoginService, HttpClientModule, SearchServiceService]
 })
 export class AppModule { }
